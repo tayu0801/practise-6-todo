@@ -18,7 +18,6 @@ class CreateTodosTable extends Migration
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
             $table->string('task_name');
-
         });
     }
 

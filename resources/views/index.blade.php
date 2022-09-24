@@ -37,7 +37,7 @@
     @csrf
     <tr>
       <th>
-        name
+        task_name
       </th>
       <td>
         <input type="text" name="task_name">
@@ -46,13 +46,12 @@
     <tr>
       <th></th>
       <td>
-        <button>送信</button>
+        <button>追加</button>
       </td>
   </table>
 </form>
 <table>
   <tr>
-    <th>id</th>
     <th>created_at</th>
     <th>updated_at</th>
     <th>task_name</th>
@@ -60,15 +59,12 @@
     <th>削除</th>
   </tr>
   @foreach ($todos as $todo)
-
   <tr>
-    <form action="/delete-update" method="post">
+    <!-- <form action="/{{$todo->id}}/update" method="post"> -->
+    <form action="/{{$todo->id}}/delete" method="post">
       @csrf
       <td>
-        <input type="text" name="id" value="{{$todo->id}}">
-      </td>
-      <td>
-        {{$todo->cteated_at}}
+        {{$todo->created_at}}
       </td>
       <td>
         {{$todo->updated_at}}
@@ -76,19 +72,13 @@
       <td>
         <input type="text" name="task_name" value="{{$todo->task_name}}">
       </td>
+      <td>
+        <button>更新</button>
+      </td>
+      <td>
+        <button>削除</button>
+      </td>
     </form>
-    <td>
-      <form action="/update" method="post">
-        @csrf
-        <button>送信</button>
-      </form>
-    </td>
-    <td>
-      <form action="/delete" method="post">
-        @csrf
-        <button>送信</button>
-      </form>
-    </td>
   </tr>
   @endforeach
 </table>
