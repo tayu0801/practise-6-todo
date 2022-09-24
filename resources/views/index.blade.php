@@ -60,25 +60,27 @@
   </tr>
   @foreach ($todos as $todo)
   <tr>
-    <!-- <form action="/{{$todo->id}}/update" method="post"> -->
-    <form action="/{{$todo->id}}/delete" method="post">
+    <td>
+      {{$todo->created_at}}
+    </td>
+    <td>
+      {{$todo->updated_at}}
+    </td>
+    <form action="/{{$todo->id}}/update" method="post">
       @csrf
-      <td>
-        {{$todo->created_at}}
-      </td>
-      <td>
-        {{$todo->updated_at}}
-      </td>
       <td>
         <input type="text" name="task_name" value="{{$todo->task_name}}">
       </td>
       <td>
         <button>更新</button>
       </td>
-      <td>
-        <button>削除</button>
-      </td>
     </form>
+    <td>
+      <form action="/{{$todo->id}}/delete" method="post">
+        @csrf
+        <button>削除</button>
+      </form>
+    </td>
   </tr>
   @endforeach
 </table>
