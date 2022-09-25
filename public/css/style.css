@@ -1,0 +1,89 @@
+body {
+    background-color: #2d197c;
+}
+.todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+.todo__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px 10px 10px 10px;
+    background: white;
+}
+.todo__title {
+    margin: 0 auto 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.todo__create {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+.todo__create-txt {
+    width: 80%;
+    padding: 10px;
+    border: 3px solid #e5e5e5;
+    border-radius: 10px 10px 10px 10px;
+}
+.todo__create-btn {
+    background: white;
+    border: 3px solid #dc70fa;
+    border-radius: 10px 10px 10px 10px;
+    color: #dc70fa;
+    font-weight: bold;
+}
+.todo__create-btn:hover {
+    background: #dc70fa;
+    border: 3px solid #dc70fa;
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+    font-weight: bold;
+}
+.todo__table-hed {
+    color: black;
+}
+.todo__table-hed-created_at {
+    width: 30%;
+}
+.todo__table-task-name {
+    border: 3px solid #e5e5e5;
+}
+.todo__table-update-btn {
+    background: white;
+    border: 3px solid #fa9770;
+    border-radius: 10px 10px 10px 10px;
+    color: #fa9770;
+    font-weight: bold;
+}
+.todo__table-update-btn:hover {
+    background: #fa9770;
+    border: 3px solid #fa9770;
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+    font-weight: bold;
+}
+.todo__table-delete-btn {
+    background: white;
+    border: 3px solid #71fadc;
+    border-radius: 10px 10px 10px 10px;
+    color: #71fadc;
+    font-weight: bold;
+}
+.todo__table-delete-btn:hover {
+    background: #71fadc;
+    border: 3px solid #71fadc;
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+    font-weight: bold;
+}
